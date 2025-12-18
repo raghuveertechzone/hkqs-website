@@ -10,9 +10,13 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-white text-gray-800 leading-relaxed">
+<body class="bg-white text-gray-800 leading-relaxed font-[Inter]">
 
   <!-- ================= HERO ================= -->
   <section class="py-20 text-center px-6">
@@ -24,18 +28,18 @@
     </p>
 
     <div class="mt-8 flex justify-center gap-4">
-      <a href="#solutions" class="px-6 py-3 bg-black text-white rounded-md">
+      <a href="#solutions" class="px-6 py-3 bg-slate-900 text-white rounded-md">
         View Solutions
       </a>
-      <a href="#contact" class="px-6 py-3 border border-black rounded-md">
+      <a href="#contact" class="px-6 py-3 border border-slate-900 rounded-md">
         Contact Us
       </a>
     </div>
   </section>
 
   <!-- ================= ABOUT ================= -->
-  <section class="py-16 max-w-4xl mx-auto px-6">
-    <h2 class="text-2xl font-semibold mb-4">About HK Quantum Solutions</h2>
+  <section class="py-24 max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-6">About HK Quantum Solutions</h2>
     <p class="text-gray-700">
       HK Quantum Solutions is a technology and analytics solutions practice focused on helping
       small and mid-sized businesses organize their data, gain visibility into their
@@ -48,9 +52,9 @@
   </section>
 
   <!-- ================= SERVICES ================= -->
-  <section id="solutions" class="py-16 bg-gray-50">
+  <section id="solutions" class="py-24 bg-gray-50">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-2xl font-semibold mb-10">Our Solutions</h2>
+      <h2 class="text-3xl font-semibold mb-6">Our Solutions</h2>
 
       <div class="grid md:grid-cols-3 gap-8">
 
@@ -101,12 +105,12 @@
   </section>
 
   <!-- ================= PORTFOLIO ================= -->
-  <section class="py-16 max-w-5xl mx-auto px-6">
-    <h2 class="text-2xl font-semibold mb-8">Portfolio & Case Studies</h2>
+  <section class="py-24 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-6">Portfolio & Case Studies</h2>
 
     <div class="space-y-8">
 
-      <div class="p-6 border rounded-lg">
+        <div class="p-8 border border-gray-200 rounded-xl shadow-sm">
         <h3 class="font-bold text-lg mb-2">
           Zoho Bigin CRM Setup & Sales Pipeline Design
         </h3>
@@ -115,7 +119,7 @@
         <p><strong>Tools:</strong> Zoho Bigin, Excel</p>
       </div>
 
-      <div class="p-6 border rounded-lg">
+      <div class="p-8 border border-gray-200 rounded-xl shadow-sm">
         <h3 class="font-bold text-lg mb-2">
           Sales Pipeline & Conversion Analytics
         </h3>
@@ -124,7 +128,7 @@
         <p><strong>Tools:</strong> Python, Pandas, SQL</p>
       </div>
 
-      <div class="p-6 border rounded-lg">
+      <div class="p-8 border border-gray-200 rounded-xl shadow-sm">
         <h3 class="font-bold text-lg mb-2">
           Business Performance & KPI Analysis
         </h3>
@@ -140,11 +144,10 @@
     </p>
   </section>
 
-  <!-- ================= CONTACT ================= -->
  <!-- ================= CONTACT ================= -->
-<section id="contact" class="py-16 bg-gray-50 px-6">
+<section id="contact" class="py-24 bg-gray-50 px-6">
     <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-2xl font-semibold mb-4">Contact HK Quantum Solutions</h2>
+      <h2 class="text-3xl font-semibold mb-6">Contact HK Quantum Solutions</h2>
       <p class="text-gray-600 mb-8">
         Tell us about your CRM or analytics requirement.
       </p>
@@ -193,6 +196,8 @@ class="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-3 rounded-full sha
 WhatsApp
 </a>
 
-
+<footer class="py-8 text-center text-sm text-gray-500">
+    © 2025 HK Ventures. All rights reserved.
+</footer>
 </body>
 </html>
