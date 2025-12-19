@@ -155,9 +155,17 @@
       <form name="contact"
             method="POST"
             data-netlify="true"
+            netlify-honeypot="bot-field"
             class="space-y-4 text-left">
   
         <input type="hidden" name="form-name" value="contact">
+
+        <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human:
+              <input name="bot-field">
+            </label>
+        </p>
   
         <div>
           <label class="block text-sm font-medium">Name</label>
@@ -170,11 +178,42 @@
           <input type="email" name="email" required
                  class="w-full mt-1 p-2 border rounded">
         </div>
+
+        <div>
+            <label class="block text-sm font-medium">Phone Number</label>
+            <div class="flex gap-2 mt-1">
+              <select name="country_code"
+                      required
+                      class="p-2 border rounded bg-white">
+                <option value="+91">🇮🇳 +91</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+44">🇬🇧 +44</option>
+                <option value="+61">🇦🇺 +61</option>
+                <option value="+65">🇸🇬 +65</option>
+              </select>
+          
+              <input type="tel"
+                     name="phone"
+                     required
+                     placeholder="Phone number"
+                     class="flex-1 p-2 border rounded">
+            </div>
+        </div>
   
         <div>
           <label class="block text-sm font-medium">Message</label>
           <textarea name="message" rows="4" required
                     class="w-full mt-1 p-2 border rounded"></textarea>
+        </div>
+
+        <div>
+            <label class="block text-sm font-medium">
+              What is <span id="num1"></span> + <span id="num2"></span>?
+            </label>
+            <input type="number"
+                   id="captcha"
+                   required
+                   class="w-full mt-1 p-2 border rounded">
         </div>
   
         <button type="submit"
@@ -199,5 +238,21 @@ WhatsApp
 <footer class="py-8 text-center text-sm text-gray-500">
     © 2025 HK Ventures. All rights reserved.
 </footer>
+<script>
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+  
+    document.getElementById("num1").textContent = num1;
+    document.getElementById("num2").textContent = num2;
+  
+    document.querySelector("form").addEventListener("submit", function (e) {
+      const answer = document.getElementById("captcha").value;
+      if (parseInt(answer) !== num1 + num2) {
+        e.preventDefault();
+        alert("Captcha answer is incorrect.");
+      }
+    });
+</script>
+
 </body>
 </html>
